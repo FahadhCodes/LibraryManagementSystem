@@ -2,7 +2,7 @@
 	id int IDENTITY(1,1) NOT NULL,
 	isbn VARCHAR(50) NOT NULL,
 	title VARCHAR(50) NOT NULL,
-	aurthour VARCHAR(50) NOT NULL,
+	author VARCHAR(50) NOT NULL,
 	category VARCHAR(50) NOT NULL,
 	quantity INT
 );
