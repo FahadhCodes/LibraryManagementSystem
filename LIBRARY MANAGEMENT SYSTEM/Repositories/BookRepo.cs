@@ -9,7 +9,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.Repositories
 {
     public class BookRepo
     {
-        private readonly string conn = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\FHD29\\Desktop\\LIBRARY MANAGEMENT C#\\Library Managment System\\LIBRARY MANAGEMENT SYSTEM\\libraryDB.mdf\";Integrated Security=True";
+        private readonly string conn = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\FHD29\\Desktop\\The Library Managment System\\LIBRARY MANAGEMENT SYSTEM\\libraryDB.mdf\";Integrated Security=True";
         //search book
         public List<Books> SearchBooks(string searchTerm)
         {
