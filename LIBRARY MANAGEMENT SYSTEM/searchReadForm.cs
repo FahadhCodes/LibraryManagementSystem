@@ -165,20 +165,28 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                     var books = repo.SearchBooks(this.tb_Search.Text.Trim());
 
                     // Debug: Check if books are returned
-                    MessageBox.Show($"Found {books.Count} books", "Debug");
-
-                    foreach (var book in books)
+                    if (books.Count>0)
                     {
-                        var Row = dT.NewRow();
-                        Row["ID"] = book.id;
-                        Row["ISBN"] = book.isbn ?? "N/A";
-                        Row["TITLE"] = book.title ?? "N/A";
-                        Row["AUTHOR"] = book.author ?? "N/A";
-                        Row["CATEGORY"] = book.category ?? "N/A";
-                        Row["QUANTITY"] = book.quantity;
-
-                        dT.Rows.Add(Row);
+                        MessageBox.Show($"Found {books.Count} books", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
+                    else
+                    {
+                        MessageBox.Show("No Search Result Found", "Info",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    }
+
+
+                        foreach (var book in books)
+                        {
+                            var Row = dT.NewRow();
+                            Row["ID"] = book.id;
+                            Row["ISBN"] = book.isbn ?? "N/A";
+                            Row["TITLE"] = book.title ?? "N/A";
+                            Row["AUTHOR"] = book.author ?? "N/A";
+                            Row["CATEGORY"] = book.category ?? "N/A";
+                            Row["QUANTITY"] = book.quantity;
+
+                            dT.Rows.Add(Row);
+                        }
 
                     this.BookTable.DataSource = dT;
 
