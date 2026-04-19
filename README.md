@@ -87,12 +87,3 @@ LibraryManagementSystem
 If you found this useful, consider giving it a star ⭐ on GitHub!
 
 ---
-
-If you want, I can also generate:
-
-✅ GitHub project banner  
-✅ License file (MIT recommended)  
-✅ Contribution guidelines  
-✅ A more advanced README with diagrams
-
-Just tell me!
